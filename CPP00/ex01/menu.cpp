@@ -6,12 +6,13 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:13:25 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/22 18:47:15 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/08/24 18:58:58 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cctype>
+#include "Contact.hpp"
 
 static void ft_putchar_toupper(char c)
 {
@@ -39,6 +40,7 @@ static void ft_print_args(char *argv[])
 int main(int argc, char *argv[])
 {
 	std::string	str;
+	Contact		contact;
 
 	if (argc == 1)
 	{
@@ -54,15 +56,19 @@ int main(int argc, char *argv[])
 				std::cout << "List closed\n" << std::endl;
 				break ;
 			}
-			if (str.compare("ADD") == 0)
+			else if (str.compare("ADD") == 0)
+			{
+				contact.set_info();
 				return (1);
-			if (str.compare("SEARCH") == 0)
+			}
+			else if (str.compare("SEARCH") == 0)
 				return (2);
 			else
 			{
 				std::cout << "Wrong option, introduce another one: ";
 				std::cin >> str;
 			}
+			// std::cout << contact.get_first_name() << std::endl;
 		}
 		return (0);
 	}
