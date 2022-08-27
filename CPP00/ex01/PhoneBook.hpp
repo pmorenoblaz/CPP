@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 16:26:35 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/27 16:14:28 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:15:31 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ public:
 	void    print_phonebook();
 	int		get_number_of_contacts();
 	Contact	get_first_contact();
-	void	print_contacts();
+	void	print_contacts(int i);
 	void	print_contact_value(std::string value);
 	int		get_place(int latest, int index);
+	void	get_contact_data(int index);
 
 	PhoneBook(void);
 	~PhoneBook(void);

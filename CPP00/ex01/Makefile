@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/08/27 14:02:51 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/08/27 18:04:24 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME = contactlist
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 
 RM = rm -f
 
@@ -32,7 +32,7 @@ RM = rm -f
 		@$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o) 
 
 $(NAME): $(OBJS)
-		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) 
+		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -fsanitize=address
 		@echo $(GREEN)$(NAME)": ready to be executed"$(NONE)
 
 all: $(NAME)  
