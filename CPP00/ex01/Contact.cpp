@@ -6,13 +6,11 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:41:53 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/24 20:51:54 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/08/27 14:29:20 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <iostream>
-#include <cctype>
 
 Contact::Contact (void)
 {
@@ -49,6 +47,11 @@ void	Contact::set_darkest_secret(std::string secret)
 	this->darkest_secret = secret;
 }
 
+void	Contact::set_index(int i)
+{
+	this->index = i;
+}
+
 std::string Contact::get_first_name(void)
 {
 	return (this->first_name);
@@ -81,6 +84,7 @@ void	Contact::print_values()
 	std::cout << "Your nickname: " << nickname << std::endl;
 	std::cout << "Your phone: " << phone << std::endl;
 	std::cout << "Your darkest secret: " << darkest_secret << std::endl;
+	std::cout << std::endl << std::endl << std::endl;
 }
 
 void	Contact::check_value(std::string	*str)
@@ -93,7 +97,7 @@ void	Contact::check_value(std::string	*str)
 	}
 }
 
-int Contact::set_info()
+int Contact::set_info(int i)
 {
 	std::string	str;
 
@@ -126,6 +130,8 @@ int Contact::set_info()
 	check_value(&str);
 	set_darkest_secret(str);
 	std::cout << std::endl;
+
+	set_index(i);
 
 	print_values();
 

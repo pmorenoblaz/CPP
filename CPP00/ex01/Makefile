@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/08/22 18:19:52 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/08/27 14:02:51 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ GREEN	= '\033[1;32m'
 YELLOW	= '\033[1;33m'
 BLUE	= '\033[1;34m'
 
-SRCS = menu.cpp Contact.cpp
+SRCS = menu.cpp Contact.cpp PhoneBook.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
