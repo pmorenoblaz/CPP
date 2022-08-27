@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:41:53 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/27 14:29:20 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:36:01 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	Contact::print_values()
 	std::cout << "Your nickname: " << nickname << std::endl;
 	std::cout << "Your phone: " << phone << std::endl;
 	std::cout << "Your darkest secret: " << darkest_secret << std::endl;
-	std::cout << std::endl << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
 }
 
 void	Contact::check_value(std::string	*str)

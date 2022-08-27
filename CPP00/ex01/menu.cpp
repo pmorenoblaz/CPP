@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:13:25 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/27 18:15:47 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:51:21 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,18 +69,16 @@ int main(int argc, char *argv[])
 			else if (str.compare("ADD") == 0)
 			{
 				i++;
-				if (i > 8)
+				if (i > 7)
 				{
 					i = pb.get_place(latest, i);
 					latest++;
 				}
 				pb.contacts[i].set_info(i);
-				i++;
 			}
 			else if (str.compare("SEARCH") == 0)
 			{
 				pb.print_contacts(i);
-				
 			}
 		}
 		return (0);
