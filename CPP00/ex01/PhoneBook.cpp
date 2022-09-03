@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 16:26:39 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/27 18:49:01 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/03 14:57:17 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	PhoneBook::get_number_of_contacts()
 
 int	PhoneBook::get_place(int latest, int index)
 {
-	if (index > 8)
+	if (index == 8)
 		return (latest);
 	else
 		return (index);
@@ -70,12 +70,12 @@ void	PhoneBook::get_contact_data(int index)
 	int			num;
 
 	std::cout << "Introduce one index:" << std::endl;
-	std::cin >> str;
+	std::getline(std::cin, str);
 	num = atoi(str.c_str());
 	while (num < 0 || num > index || num > 7)
 	{
 		std::cout << "Wrong option, introduce another one: ";
-		std::cin >> str;
+		std::getline(std::cin, str);
 		num = atoi(str.c_str());
 	}
 	std::cout << std::endl;
@@ -83,7 +83,7 @@ void	PhoneBook::get_contact_data(int index)
 		contacts[num].print_values();
 }
 
-void	PhoneBook::print_contacts(int index)
+void	PhoneBook::print_contacts(int index, int tam)
 {
 	int	i;
 
@@ -94,9 +94,10 @@ void	PhoneBook::print_contacts(int index)
 		std::cout << std::endl;
 		std::cout << "-------------------------------------------" << std::endl;
 		std::cout << "----------------- Contacts ----------------" << std::endl;
+		std::cout << "-------------------------------------------" << std::endl;
 		std::cout << "   index  |first name|last name | nickname " << std::endl;
 		std::cout << "-------------------------------------------" << std::endl;
-		while (i <= index)
+		while (i < tam)
 		{
 			std::cout << "         " << i;
 			print_contact_value(contacts[i].first_name);

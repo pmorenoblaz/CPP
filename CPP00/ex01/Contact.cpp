@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:41:53 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/27 18:36:01 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/03 13:32:09 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,54 +79,54 @@ std::string Contact::get_darkest_secret(void)
 
 void	Contact::print_values()
 {
-	std::cout << "Your first name: " << first_name << std::endl;
-	std::cout << "Your last name: " << last_name << std::endl;
-	std::cout << "Your nickname: " << nickname << std::endl;
-	std::cout << "Your phone: " << phone << std::endl;
-	std::cout << "Your darkest secret: " << darkest_secret << std::endl;
+	std::cout << "First name: " << first_name << std::endl;
+	std::cout << "Last name: " << last_name << std::endl;
+	std::cout << "Nickname: " << nickname << std::endl;
+	std::cout << "Phone: " << phone << std::endl;
+	std::cout << "Darkest secret: " << darkest_secret << std::endl;
 	std::cout << std::endl << std::endl;
 }
 
-void	Contact::check_value(std::string	*str)
+void	Contact::check_value(std::string *str)
 {
-	
 	while ((*str).length() == 0)
 	{
-		std::cout << "You have to write some values: ";
-		std::cin >> *str;
+		std::cout << "You have to write a value: ";
+		getline(std::cin, *str);
 	}
+	
 }
 
 int Contact::set_info(int i)
 {
-	std::string	str;
+	std::string str;
 
-	std::cout << "Introduce your first name:" << std::endl;
-	std::cin >> str;
+	std::cout << "Introduce the first name:" << std::endl;
+	std::getline(std::cin, str);
 	check_value(&str);
 	set_first_name(str);
 	std::cout << std::endl;
 	
-	std::cout << "Introduce your last name:" << std::endl;
-	std::cin >> str;
+	std::cout << "Introduce the last name:" << std::endl;
+	std::getline(std::cin, str);
 	check_value(&str);
 	set_last_name(str);
 	std::cout << std::endl;
 
-	std::cout << "Introduce your nickname:" << std::endl;
-	std::cin >> str;
+	std::cout << "Introduce the nickname:" << std::endl;
+	std::getline(std::cin, str);
 	check_value(&str);
 	set_nickname(str);
 	std::cout << std::endl;
 
-	std::cout << "Introduce your phone:" << std::endl;
-	std::cin >> str;
+	std::cout << "Introduce the phone:" << std::endl;
+	std::getline(std::cin, str);
 	check_value(&str);
 	set_phone_number(str);
 	std::cout << std::endl;
 
-	std::cout << "Introduce your darkest secret:" << std::endl;
-	std::cin >> str;
+	std::cout << "Introduce the darkest secret:" << std::endl;
+	std::getline(std::cin, str);
 	check_value(&str);
 	set_darkest_secret(str);
 	std::cout << std::endl;
