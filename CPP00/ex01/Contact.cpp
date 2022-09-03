@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 17:41:53 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/03 13:32:09 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:37:56 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,11 +87,38 @@ void	Contact::print_values()
 	std::cout << std::endl << std::endl;
 }
 
+int	Contact::all_are_digits(std::string str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!isdigit(str[i]))
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 void	Contact::check_value(std::string *str)
 {
 	while ((*str).length() == 0)
 	{
 		std::cout << "You have to write a value: ";
+		getline(std::cin, *str);
+	}
+	
+}
+
+void	Contact::check_phone(std::string *str)
+{
+	while ((*str).length() == 0 || all_are_digits(*str) == 1)
+	{
+		if ((*str).length() == 0)
+			std::cout << "You have to write a value: ";
+		else
+			std::cout << "The number is no correct. Write another phone number: ";
 		getline(std::cin, *str);
 	}
 	
@@ -121,7 +148,7 @@ int Contact::set_info(int i)
 
 	std::cout << "Introduce the phone:" << std::endl;
 	std::getline(std::cin, str);
-	check_value(&str);
+	check_phone(&str);
 	set_phone_number(str);
 	std::cout << std::endl;
 
@@ -132,8 +159,6 @@ int Contact::set_info(int i)
 	std::cout << std::endl;
 
 	set_index(i);
-
-	print_values();
 
 	return (0);
 }

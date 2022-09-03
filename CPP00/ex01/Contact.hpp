@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 18:02:08 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/03 13:30:45 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:34:22 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ public:
 	void	print_values();
 
 	void	check_value(std::string *value);
+	int		all_are_digits(std::string str);
+	void	check_phone(std::string *value);
 	int 	set_info(int i);
 
 	Contact(void);
