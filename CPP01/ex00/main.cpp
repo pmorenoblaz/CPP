@@ -5,19 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 17:13:25 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/05 18:56:29 by pmoreno-         ###   ########.fr       */
+/*   Created: 2022/09/06 19:01:48 by pmoreno-          #+#    #+#             */
+/*   Updated: 2022/09/06 19:13:57 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
 #include "Zombie.hpp"
 
 int	main(void)
 {
-	return (0);
+	Zombie zombie1 = Zombie("Zombie 1");
+	zombie1.announce();
+
+	Zombie* zombie2 = newZombie("Zombie 2");
+	zombie2->announce();
+	delete zombie2;
+
+	randomChump("Zombie 3");
 }
-
-
-

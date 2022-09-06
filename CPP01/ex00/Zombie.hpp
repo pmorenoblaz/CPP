@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 18:58:13 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/05 19:26:28 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/06 19:12:55 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ public:
 	Zombie(std::string	name);
 	~Zombie(void);
 
-	void	Zombie::announce(void);
+	void	announce(void);
 };
+
+Zombie* newZombie( std::string name );
+void	randomChump( std::string name );
 
 #endif

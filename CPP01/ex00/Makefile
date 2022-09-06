@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/05 19:03:40 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/06 19:18:06 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ GREEN	= '\033[1;32m'
 YELLOW	= '\033[1;33m'
 BLUE	= '\033[1;34m'
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomZombie.cpp 
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = contactlist
+NAME = zombies
 
 CC = c++
 
