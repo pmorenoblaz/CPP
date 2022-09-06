@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 16:34:20 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/30 17:10:39 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:51:45 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ Account::~Account( void )
     return ;
 }
 
+Account::Account( void )
+{
+    return ;
+}
+
 Account::Account( int initial_deposit )
 {
     // _totalNbDeposits = initial_deposit;
@@ -58,4 +63,16 @@ int		Account::checkAmount( void ) const
 void	Account::displayStatus( void ) const
 {
     return ;
+}
+
+void	Account::_displayTimestamp(void)
+{
+	time_t	rawtime;
+	struct	tm * timeinfo;
+	char	buffer[16];
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	strftime(buffer, 16, "%Y%m%d_%H%M%S", timeinfo);
+	std::cout << "[" << buffer << "] ";
 }
