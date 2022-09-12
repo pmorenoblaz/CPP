@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 16:26:39 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/06 19:53:25 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/12 17:42:00 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ Zombie* zombieHorde( int N, std::string name ){
 
     i = 0;
     if (N < 1)
+    {
+        std::cout << "There are not enough zombies" << std::endl;
         return (NULL);
+    }
     while (i < N){
-        std::cout << "Number: " << i;
         zombies[i].set_name(name);
         zombies[i].announce();
         i++;
