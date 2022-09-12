@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:00:12 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:52:33 by pmoreno-         ###   ########.fr       */
+/*   Created: 2022/09/12 17:41:20 by pmoreno-          #+#    #+#             */
+/*   Updated: 2022/09/12 19:02:51 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A_H
-# define HUMAN_A_H
-
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-class HumanA {
-private:
-    Weapon      weapon;
-	std::string	name;
-public:
+
+int	main(void)
+{
 	
-	// HumanA(void);
-	HumanA(std::string	name, Weapon weapon);
-	~HumanA(void);
-
-	void	attack(void);
-};
-
-# endif
+	
+	return (0);
+}

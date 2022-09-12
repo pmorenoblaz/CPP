@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/12 18:53:42 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/12 18:53:52 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = weapons
+NAME = replace
 
 CC = c++
 

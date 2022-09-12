@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:00:12 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:52:33 by pmoreno-         ###   ########.fr       */
+/*   Created: 2022/09/12 18:00:01 by pmoreno-          #+#    #+#             */
+/*   Updated: 2022/09/12 18:44:39 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A_H
-# define HUMAN_A_H
+#include "HumanA.hpp"
 
-#include "Weapon.hpp"
+// HumanA::HumanA(void){
+// 	return ;
+// }
 
-class HumanA {
-private:
-    Weapon      weapon;
-	std::string	name;
-public:
-	
-	// HumanA(void);
-	HumanA(std::string	name, Weapon weapon);
-	~HumanA(void);
+HumanA::HumanA(std::string	name, Weapon& weapon){
+	this->name = name;
+	Weapon *wp = &weapon;
+	return ;
+}
 
-	void	attack(void);
-};
+HumanA::~HumanA(void){
+	std::cout << "Human A destroyed" << std::endl;
+	return ;
+}
 
-# endif
+void	HumanA::attack(void){
+	std::cout << this->name << " attacks with his " << this->weapon.getType() << std::endl;
+}
