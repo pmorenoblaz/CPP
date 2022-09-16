@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:00:01 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/16 12:11:24 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:30:38 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,22 @@ void	Replace::replaceStrings(void){
 	std::string aux;
 	std::filebuf* inbuf;
 	int i = 0;
+	char c;
 	
-	fin.open (this->getFileName(), std::fstream::in);
-	fout.open (outfile, std::fstream::out);
+	fin.open(this->getFileName(), std::fstream::in);
+	if (fin.fail()){
+		std::cout << "--> Error: The file does not exist or have permissions to be opened." << std::endl;
+		return ;
+	}
+	fout.open(outfile, std::fstream::out);
+	if (fin.fail()){
+		std::cout << "--> Error: Problems creating the new file." << std::endl;
+		return ;
+	}
 	inbuf  = fin.rdbuf();
-	char c = inbuf->sbumpc();
+	c = inbuf->sbumpc();
+	if (c == EOF)
+		std::cout << "The file is empty :(" << std::endl;
 	while (c != EOF)
 	{
 		if (i == (s1.length())){
@@ -102,4 +113,3 @@ void	Replace::replaceStrings(void){
 	fout.close();
 	fin.close();
 }
-
