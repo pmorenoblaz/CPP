@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/12 18:53:52 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/16 11:13:07 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ GREEN	= '\033[1;32m'
 YELLOW	= '\033[1;33m'
 BLUE	= '\033[1;34m'
 
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp Replace.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
