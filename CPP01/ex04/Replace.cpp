@@ -32,10 +32,8 @@ Replace::Replace(void){
 Replace::~Replace(){
 	if(this->getFileName().empty() || this->getStringS1().empty() || this->getStringS2().empty())
 		std::cout << "It didn't worked out. Try again." << std::endl << std::endl;
-	else {
-		std::cout << "The strings have been replaced. Check the new file: " << this->getFileReplaced() << std::endl << std::endl;
+	else
 		this->replaceStrings();
-	}
 	return ;
 }
 
@@ -112,4 +110,5 @@ void	Replace::replaceStrings(void){
 	}
 	fout.close();
 	fin.close();
+	std::cout << "The strings have been replaced. Check the new file: " << outfile << std::endl << std::endl;
 }
