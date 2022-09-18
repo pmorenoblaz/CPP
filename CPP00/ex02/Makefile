@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/08/29 16:59:01 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/18 12:09:24 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = tests.cpp Account.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = contactlist
+NAME = account
 
 CC = c++
 

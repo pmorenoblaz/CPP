@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:13:25 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/08/21 17:41:59 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 13:12:41 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ int main(int argc, char *argv[])
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 		ft_print_args(argv);
-	std::cout << "\n";
+	std::cout << std::endl;
 }
