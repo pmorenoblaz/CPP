@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:11:20 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:11:23 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:53:34 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Weapon::Weapon(std::string	type){
 }
 
 Weapon::~Weapon(void){
-	std::cout << "Weapon destroyed" << std::endl;
 	return ;
 }
 

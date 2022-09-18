@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/18 19:17:01 by pmoreno-          #+#    #+#             */
+/*   Updated: 2022/09/18 19:17:03 by pmoreno-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
 Karen::Karen(){
@@ -72,6 +84,6 @@ void Karen::complain( std::string level ){
 			break ;
 		}
 		default:
-			std::cout << "The level does not exist. The Karen left without saying anything." << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 19:01:48 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/06 19:13:57 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:48:45 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(void)
 
 	Zombie* zombie2 = newZombie("Zombie 2");
 	zombie2->announce();
-	delete zombie2;
+	if (zombie2)
+		delete zombie2;
 
 	randomChump("Zombie 3");
 }

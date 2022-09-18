@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:59:52 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:52:04 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 17:31:54 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class HumanB {
 private:
-    Weapon      weapon;
+    Weapon      *weapon;
 	std::string	name;
 public:
 	

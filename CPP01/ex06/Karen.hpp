@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                        :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 18:00:12 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/16 12:11:47 by pmoreno-         ###   ########.fr       */
+/*   Created: 2022/09/18 19:16:52 by pmoreno-          #+#    #+#             */
+/*   Updated: 2022/09/18 19:18:35 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 #include <cstdio>
 
 class Karen {
-    typedef void (Karen:: *complFunction)(void);
 private:
     std::string levels[4];
     
@@ -29,6 +28,9 @@ private:
     void warning( void );
     void error( void );
 public:
+
+    typedef void (Karen:: *complFunction)(void);
+
 	Karen();
 	~Karen();
 

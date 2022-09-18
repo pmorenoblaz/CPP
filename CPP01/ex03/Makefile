@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/12 18:53:42 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/18 15:39:05 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME = weapons
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 

@@ -6,14 +6,14 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:00:17 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:51:55 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:53:23 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
 HumanB::HumanB(void){
-	return ;
+	std::cout << "You can't create a Human B without a name" << std::endl;
 }
 
 HumanB::HumanB(std::string	name){
@@ -32,5 +32,5 @@ void	HumanB::attack(void){
 }
 
 void HumanB::setWeapon(Weapon weapon){
-    this->weapon = weapon;
+    this->weapon = &weapon;
 }

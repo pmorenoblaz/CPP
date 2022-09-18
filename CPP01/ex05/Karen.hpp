@@ -16,9 +16,9 @@
 #include <iostream>
 #include <fstream>
 #include <cstdio>
+#include <cstring>
 
 class Karen {
-    typedef void (Karen:: *complFunction)(void);
 private:
     std::string levels[4];
     
@@ -28,6 +28,9 @@ private:
     void warning( void );
     void error( void );
 public:
+
+    typedef void (Karen:: *complFunction)(void);
+    
 	Karen();
 	~Karen();
 

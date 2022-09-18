@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:00:01 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/16 12:30:38 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 19:11:55 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,47 +68,34 @@ std::string	Replace::getFileReplaced(void){
 }
 
 void	Replace::replaceStrings(void){
-	std::string aux;
-	std::filebuf* inbuf;
-	int i = 0;
-	char c;
+	std::string 		aux;
+	std::string 		line;
+	std::string 		str;
+	std::stringstream	buffer;
+	int					f;
 	
-	fin.open(this->getFileName(), std::fstream::in);
-	if (fin.fail()){
+	this->fin.open(this->getFileName(), std::fstream::in);
+	if (this->fin.fail()){
 		std::cout << "--> Error: The file does not exist or have permissions to be opened." << std::endl;
 		return ;
 	}
-	fout.open(outfile, std::fstream::out);
-	if (fin.fail()){
+	this->fout.open(outfile, std::fstream::out);
+	if (this->fout.fail()){
 		std::cout << "--> Error: Problems creating the new file." << std::endl;
 		return ;
 	}
-	inbuf  = fin.rdbuf();
-	c = inbuf->sbumpc();
-	if (c == EOF)
-		std::cout << "The file is empty :(" << std::endl;
-	while (c != EOF)
-	{
-		if (i == (s1.length())){
-			fout << s2;
-			aux = "";
-			i = 0;
-		}
-		if (c == s1[i]){
-			aux = aux + c;
-			i++;
-		}
-		else {
-			if (!aux.empty())
-				fout << aux;
-			else
-				fout << c;
-			i = 0;
-			aux = "";
-		}
-		c = inbuf->sbumpc();
+	buffer << this->fin.rdbuf();
+	line = buffer.str();
+	f = line.find(this->getStringS1());
+	while (!line.empty() && f != std::string::npos){
+		str = line.substr(0, f) + s2;
+		aux += str;
+		line = line.substr(f + s1.length(), line.length() - s1.length());
+		f = line.find(this->getStringS1());
 	}
-	fout.close();
-	fin.close();
+	aux += line;
+	this->fout << aux;
+	this->fout.close();
+	this->fin.close();
 	std::cout << "The strings have been replaced. Check the new file: " << outfile << std::endl << std::endl;
 }

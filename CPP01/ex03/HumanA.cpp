@@ -6,20 +6,14 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:00:01 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/09/12 18:53:49 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:48:25 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-// HumanA::HumanA(void){
-// 	return ;
-// }
-
-HumanA::HumanA(std::string	name, Weapon weapon){
+HumanA::HumanA(std::string	name, Weapon &weapon): weapon(weapon) {
 	this->name = name;
-	Weapon wp = weapon;
-	return ;
 }
 
 HumanA::~HumanA(void){
