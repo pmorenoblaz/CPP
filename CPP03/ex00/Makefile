@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/16 11:13:07 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/09/26 19:29:10 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,19 +16,19 @@ GREEN	= '\033[1;32m'
 YELLOW	= '\033[1;33m'
 BLUE	= '\033[1;34m'
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = fixedNumbers
+NAME = claptrap
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
-%.o:%.c
+%.o:%.cpp
 		@$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o) 
 
 $(NAME): $(OBJS)
