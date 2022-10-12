@@ -6,7 +6,7 @@
 #    By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/21 17:13:27 by pmoreno-          #+#    #+#              #
-#    Updated: 2022/09/16 11:13:07 by pmoreno-         ###   ########.fr        #
+#    Updated: 2022/10/03 18:54:57 by pmoreno-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,11 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 
 RM = rm -f
 
-%.o:%.c
+%.o:%.cpp
 		@$(CC) $(CFLAGS) -c $< -o $(<:.cpp=.o) 
 
 $(NAME): $(OBJS)
-		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) # -fsanitize=address
+		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 		@echo $(GREEN)$(NAME)": ready to be executed"$(NONE)
 
 all: $(NAME)  

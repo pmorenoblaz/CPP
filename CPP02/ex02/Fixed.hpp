@@ -20,33 +20,42 @@
 
 class Fixed {
 private:
-    int fixedValue;
-    static const int bits = 8; 
+	int _fixedValue;
+	static const int _bits = 8; 
 public:
-    Fixed();
+	Fixed();
 	~Fixed();
-    Fixed(const Fixed &value);
-    Fixed(const int value);
-    Fixed(const float value);
-    
-    Fixed &operator = (const Fixed &value);
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
-    float toFloat( void ) const;
-    int toInt( void ) const;
+	Fixed(const Fixed &value);
+	Fixed(const int value);
+	Fixed(const float value);
+	
+	Fixed &operator = (const Fixed &value);
+	int getRawbits( void ) const;
+	void setRawbits( int const raw );
+	float toFloat( void ) const;
+	int toInt( void ) const;
 
-    bool operator<(const Fixed &value) const;
-    bool operator>(const Fixed &value) const;
-    bool operator<=(const Fixed &value) const;
-    bool operator>=(const Fixed &value) const;
-    bool operator==(const Fixed &value) const;
-    bool operator!=(const Fixed &value) const;
+	bool operator<(const Fixed &value) const;
+	bool operator>(const Fixed &value) const;
+	bool operator<=(const Fixed &value) const;
+	bool operator>=(const Fixed &value) const;
+	bool operator==(const Fixed &value) const;
+	bool operator!=(const Fixed &value) const;
 
-    Fixed operator+(const Fixed &value) const;
-    Fixed operator-(const Fixed &value) const;
-    Fixed operator*(const Fixed &value) const;
-    Fixed operator/(const Fixed &value) const;
+	Fixed operator+(const Fixed &value) const;
+	Fixed operator-(const Fixed &value) const;
+	Fixed operator*(const Fixed &value) const;
+	Fixed operator/(const Fixed &value) const;
 
+	Fixed operator++(int);
+	Fixed operator--(int);
+	Fixed& operator++();
+	Fixed& operator--();
+
+	static Fixed &min(Fixed &fixed1, Fixed &fixed2);
+	static Fixed &max(Fixed &fixed1, Fixed &fixed2);
+	const static Fixed &min(Fixed const &fixed1, Fixed const &fixed2);
+	const static Fixed &max(Fixed const &fixed1, Fixed const &fixed2);
 };
 
 std::ostream& operator<<(std::ostream &os, const Fixed &value);
