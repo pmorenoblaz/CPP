@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:31:43 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/10/12 15:50:00 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/10/13 09:42:37 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void  Fixed::setRawbits( int const value ){
 }
 
 float Fixed::toFloat( void ) const{
-	return((float) this->getRawbits() / (float) (1<<_bits));
+	return(this->getRawbits() / (float) (1<<_bits));
 }
 
 int Fixed::toInt( void ) const{
@@ -94,7 +94,7 @@ Fixed Fixed::operator-(const Fixed &value) const{
 }
 
 Fixed Fixed::operator*(const Fixed &value) const{
-	return (Fixed(this->toFloat() * (float) value.getRawbits()));
+	return (Fixed(this->toFloat() * (float) value.toFloat()));
 }
 
 Fixed Fixed::operator/(const Fixed &value) const{
