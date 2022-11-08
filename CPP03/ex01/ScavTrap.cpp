@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:52:56 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/10/13 12:04:41 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/11/08 20:59:20 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 #include <iostream>
 
 ScavTrap::ScavTrap() {
-	std::cout << "Please, provide a name to create a player. The player was not created" << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "It seems like the player have died" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) {
 	this->setName(name);
-	this->setHitPoints(10);
-	this->setEnergyPoints(10);
-	this->setAttackDamage(0);
+	this->setHitPoints(100);
+	this->setEnergyPoints(50);
+	this->setAttackDamage(20);
 	std::cout << "Player " << name << " created!" << std::endl;
 }
 
@@ -34,7 +32,7 @@ void ScavTrap::guardGate() {
 }
 
 void ScavTrap::attack(std::string const &tar){
-	std::cout << "ScavTrap " << this->getName() << " attack" << tar << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " attack " << tar << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
 }
 
 void ScavTrap::takeDamage(unsigned int amount){
@@ -42,7 +40,7 @@ void ScavTrap::takeDamage(unsigned int amount){
 }
 
 void ScavTrap::beRepaired(unsigned int amount) {
-	std::cout << "ScavTrap " << this->getName() << "was repaired, +" << amount << " points of energy!" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " was repaired, +" << amount << " points of energy!" << std::endl;
 }
 
 void ScavTrap::setHitPoints(unsigned int hitPoints) {

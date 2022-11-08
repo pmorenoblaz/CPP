@@ -7,6 +7,7 @@ ClapTrap::ClapTrap() {
 
 ClapTrap::~ClapTrap() {
 	std::cout << "It seems like the player have died" << std::endl;
+	return ;
 }
 
 ClapTrap::ClapTrap(std::string name) {
@@ -18,7 +19,7 @@ ClapTrap::ClapTrap(std::string name) {
 }
 
 void ClapTrap::attack(std::string const &tar){
-	std::cout << "ClapTrap " << this->getName() << " attack" << tar << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->getName() << " attack " << tar << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
@@ -26,7 +27,7 @@ void ClapTrap::takeDamage(unsigned int amount){
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-	std::cout << "ClapTrap " << this->getName() << "was repaired, +" << amount << " points of energy!" << std::endl;
+	std::cout << "ClapTrap " << this->getName() << " was repaired, +" << amount << " points of energy!" << std::endl;
 }
 
 void ClapTrap::setHitPoints(unsigned int hitPoints) {

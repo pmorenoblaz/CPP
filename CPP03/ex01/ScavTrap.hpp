@@ -6,7 +6,7 @@
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:52:48 by pmoreno-          #+#    #+#             */
-/*   Updated: 2022/10/13 12:13:49 by pmoreno-         ###   ########.fr       */
+/*   Updated: 2022/11/08 20:58:59 by pmoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
+	private:
+    std::string _name;
+    int _hitPoints;
+    int _energyPoints;
+    int _attackDamage;
+	
 public:
 	ScavTrap();
 	~ScavTrap();
