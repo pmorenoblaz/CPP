@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#ifndef DIAMONDTRAP_H
+# define DIAMONDTRAP_H
 
 #include <iostream>
 #include <fstream>
@@ -19,15 +19,15 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class DiamondTrap : public ClapTrap {
 public:
-	ScavTrap();
-	~ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const & value);
-	ScavTrap& operator = (const ScavTrap &value);
+	DiamondTrap();
+	~DiamondTrap();
+	DiamondTrap(std::string name);
+	DiamondTrap(DiamondTrap const & value);
+	DiamondTrap& operator = (const DiamondTrap &value);
 
-	void guardGate();
+	void highFivesGuys(void);
 
 	void attack(std::string const &target);
 	// void takeDamage(unsigned int amount);

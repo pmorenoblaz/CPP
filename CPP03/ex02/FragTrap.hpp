@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreno- <pmoreno-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
 #include <iostream>
 #include <fstream>
@@ -19,15 +19,15 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class FragTrap : public ClapTrap {
 public:
-	ScavTrap();
-	~ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const & value);
-	ScavTrap& operator = (const ScavTrap &value);
+	FragTrap();
+	~FragTrap();
+	FragTrap(std::string name);
+	FragTrap(FragTrap const & value);
+	FragTrap& operator = (const FragTrap &value);
 
-	void guardGate();
+	void highFivesGuys(void);
 
 	void attack(std::string const &target);
 	// void takeDamage(unsigned int amount);
